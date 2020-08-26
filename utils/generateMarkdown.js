@@ -2,10 +2,10 @@
 function generateMarkdown(data) {
   console.log("Success", data)
     return `# ${data.title}
-## Description
+### Description
     ${data.description}
-## Table of Contents
-    [Installation](#Installation)
+### Table of Contents
+    [Installation](###installation)
     - Usage
     - License
 ### Installation
