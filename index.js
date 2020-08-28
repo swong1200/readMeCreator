@@ -1,6 +1,6 @@
-var inquirer = require("inquirer");
-var fs = require("fs");
-var generateMarkdown = require("./utils/generateMarkdown")
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown")
 
 // array of questions for user
 const questions = [
@@ -54,21 +54,20 @@ const questions = [
 ];
 
 // function to write README file
-// function writeToFile(fileName, data) {
+// function writeToFile(fileName, data) {  
 // }
 
 // function to initialize program
 function init() {
-  inquirer.prompt(questions).then(function (data) {
-    var fileName = data.title.toLowerCase().split(' ').join('') + ".md";
-    var md = generateMarkdown(data);
-    fs.writeFile(fileName, md, function (err) {
+  inquirer.prompt(questions).then ((data) => {
+    console.log(data.license)
+    let fileName = data.title.toLowerCase().split(' ').join('') + ".md";
+    let md = generateMarkdown(data);
+    fs.writeFile(fileName, md, (err) => {
       if (err) {
         return console.log(err);
       }
-
-      console.log("Success!");
-      
+      console.log("Success!", data);
     });
   });
 }

@@ -1,26 +1,46 @@
+// License Badges
+
+
+let licenses = {
+    MIT :  "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+    IBM : "[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)",
+    ISC : "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
+    Mozilla : "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)",
+    Unlicense : "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+}
+
+
+console.log(licenses)
+
+
 // function to generate markdown for README
 function generateMarkdown(data) {
   console.log("Success", data)
     return `# ${data.title}
+${licenses[data.license[0]]}
 ### Description
-    ${data.description}
+${data.description}
 ### Table of Contents
-    [Installation](#installation)
-    - Usage
-    - License
+-[Installation](#installation)\n
+-[Usage](#usage)\n
+-[License](#license)\n
+-[Contributing](#contributing)\n
+-[Tests](#tests)\n
+-[Questions](#questions)\n
 ### Installation
-    ${data.installation}
+${data.installation}
 ### Usage
-    ${data.usage}
+${data.usage}
 ### License
-    ${data.license}
+${data.license}
 ### Contributing
-    ${data.contributing}
+${data.contributing}
 ### Tests
-    ${data.tests}
+${data.tests}
 ### Questions
-    If you have any questions about this project, please forward them to me at ${data.email}.
-    [www.github.com/${data.github}](https://github.com/${data.github})
+If you have any questions or issues, please forward them to me at ${data.email}.
+### Author
+[www.github.com/${data.github}](https://github.com/${data.github})
   `;
   }
   

@@ -1,6 +1,6 @@
-# test5
+# test7
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
 ### Description
 test
 ### Table of Contents
@@ -21,13 +21,13 @@ test
 ### Usage
 test
 ### License
-MIT
+Mozilla
 ### Contributing
 test
 ### Tests
 test
 ### Questions
-If you have any questions or issues, please forward them to me at test.
+If you have any questions or issues, please forward them to me at swong31@gmail.com.
 ### Author
-[www.github.com/test](https://github.com/test)
+[www.github.com/swong1200](https://github.com/swong1200)
   
