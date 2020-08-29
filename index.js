@@ -1,6 +1,10 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdown")
+const utility = require("./utils/generateMarkdown.js");
+const util = require("util");
+
+const readFileAsync = util.promisify(fs.readFile);
+const writeFileAsync = util.promisify(fs.writeFile);
 
 // array of questions for user
 const questions = [
@@ -36,40 +40,45 @@ const questions = [
     message: "Please provide details about what your project's usage: ",
   },
   {
-    type: "checkbox",
+    type: "rawlist",
     name: "license",
     message: "Which badge would you like?",
     choices: ["MIT", "IBM", "ISC", "Mozilla", "Unlicense"],
   },
   {
-  type: "input",
+    type: "input",
     name: "contributing",
     message: "Please provide any details about contributing guidelines: ",
   },
   {
     type: "input",
-      name: "tests",
-      message: "What tests are necessary? ",
-    }
+    name: "tests",
+    message: "What tests are necessary? ",
+  },
 ];
 
-// function to write README file
-// function writeToFile(fileName, data) {  
-// }
-
 // function to initialize program
-function init() {
-  inquirer.prompt(questions).then ((data) => {
-    console.log(data.license)
-    let fileName = data.title.toLowerCase().split(' ').join('') + ".md";
-    let md = generateMarkdown(data);
-    fs.writeFile(fileName, md, (err) => {
-      if (err) {
-        return console.log(err);
-      }
-      console.log("Success!", data);
-    });
-  });
+async function init() {
+  console.log("Helllo");
+  try {
+    const answers = await inquirer.prompt(questions);
+    console.log(answers);
+    // await readFileAsync(utility.licenses[answers.license[0]])
+    let mit =  await readFileAsync("./mit.txt", "utf8")
+
+    const md = utility.generateMarkdown(answers, mit);
+
+    let fileName = answers.title.toLowerCase().split(' ').join('') + ".md";
+    console.log(fileName)
+   
+
+    const data = await writeFileAsync(fileName, md)
+    console.log(data)
+    
+  }
+   catch (err) {
+    console.log(err);
+  }
 }
 
 // function call to initialize program
