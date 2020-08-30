@@ -1,26 +1,3 @@
-# readMeCreator
-[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
-## Description
-This CLI application will generate a nice readme.md file for the user based upon their inputs.  
-## Table of Contents
--[Installation](#installation)
-
--[Usage](#usage)
-
--[License](#license)
-
--[Contributing](#contributing)
-
--[Tests](#tests)
-
--[Questions](#questions)
-
--[Author](#author)
-## Installation
-npm install inquirer; npm install util
-## Usage
-This application takes the hassle out of creating and formatting a readme.md.  It will generate a nicely organized and complete readme.md everytime.
-## License
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
@@ -45,12 +22,3 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
-## Contributing
-None
-## Tests
-None
-## Questions
-If you have any questions or issues, please forward them to me at swong31@gmail.com.
-## Author
-[www.github.com/swong1200](https://github.com/swong1200)
-  

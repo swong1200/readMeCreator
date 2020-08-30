@@ -1,12 +1,14 @@
+// Dependencies
 const inquirer = require("inquirer");
 const fs = require("fs");
 const utility = require("./utils/generateMarkdown.js");
 const util = require("util");
 
+// Runs fs async
 const readFileAsync = util.promisify(fs.readFile);
 const writeFileAsync = util.promisify(fs.writeFile);
 
-// array of questions for user
+// Array of questions for user
 const questions = [
   {
     type: "input",
@@ -40,7 +42,7 @@ const questions = [
     message: "Please provide details about what your project's usage: ",
   },
   {
-    type: "rawlist",
+    type: "list",
     name: "license",
     message: "Which badge would you like?",
     choices: ["MIT", "IBM", "ISC", "Mozilla", "Unlicense"],
@@ -57,26 +59,32 @@ const questions = [
   },
 ];
 
-// function to initialize program
+// Function to initialize program
 async function init() {
-  console.log("Helllo");
+  console.log("Let me help you create a ReadMe.md...");
+
   try {
     const answers = await inquirer.prompt(questions);
-    console.log(answers);
-    // await readFileAsync(utility.licenses[answers.license[0]])
-    let mit =  await readFileAsync("./mit.txt", "utf8")
 
-    const md = utility.generateMarkdown(answers, mit);
+    let legal;
+    if (answers.license === "MIT") {
+      legal = await readFileAsync("./mit.txt", "utf8");
+    } else if (answers.license === "IBM") {
+      legal = await readFileAsync("./ibm.txt", "utf8");
+    } else if (answers.license === "ISC") {
+      legal = await readFileAsync("./isc.txt", "utf8");
+    } else if (answers.license === "Mozilla") {
+      legal = await readFileAsync("./mozilla.txt", "utf8");
+    } else {
+      legal = await readFileAsync("./unlicense.txt", "utf8");
+    }
 
-    let fileName = answers.title.toLowerCase().split(' ').join('') + ".md";
-    console.log(fileName)
-   
+    const md = utility.generateMarkdown(answers, legal);
 
-    const data = await writeFileAsync(fileName, md)
-    console.log(data)
-    
-  }
-   catch (err) {
+    const fileName = answers.title.toLowerCase().split(" ").join("") + ".md";
+
+    await writeFileAsync(fileName, md);
+  } catch (err) {
     console.log(err);
   }
 }

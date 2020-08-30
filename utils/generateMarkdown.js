@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 // License Badges
 const badges = {
   MIT:
@@ -14,58 +12,38 @@ const badges = {
     "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)",
 };
 
-// const licenses = {
-//   MIT:  fs.readFile("./mit.txt", "utf8", function (err, contents) {
-//       if (err) throw err;
-//       let mit = contents;
-//       console.log(mit)
-//     }),
-//   ISC:  fs.readFile("./isc.txt", "utf8", function (err, contents) {
-//     if (err) throw err;
-//     let isc = contents;
-//     console.log(isc)
-//   }),
-// }
-
-
-
 // function to generate markdown for README
-function generateMarkdown(data, mit) {
+function generateMarkdown(data, legal) {
   console.log("Success", data);
   return `# ${data.title}
 ${badges[data.license]}
-### Description
+## Description
 ${data.description}
-### Table of Contents
+## Table of Contents
 -[Installation](#installation)\n
 -[Usage](#usage)\n
 -[License](#license)\n
 -[Contributing](#contributing)\n
 -[Tests](#tests)\n
 -[Questions](#questions)\n
-### Installation
+-[Author](#author)
+## Installation
 ${data.installation}
-### Usage
+## Usage
 ${data.usage}
-### License
-${mit}
-### Contributing
+## License
+${legal}
+## Contributing
 ${data.contributing}
-### Tests
+## Tests
 ${data.tests}
-### Questions
+## Questions
 If you have any questions or issues, please forward them to me at ${data.email}.
-### Author
+## Author
 [www.github.com/${data.github}](https://github.com/${data.github})
   `;
 }
 
-module.exports = 
-{
+module.exports = {
   generateMarkdown: generateMarkdown,
-  // licenses: licenses
-}
-
-  
-
-
+};

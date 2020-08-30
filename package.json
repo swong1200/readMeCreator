@@ -1,13 +1,13 @@
 {
   "name": "static-site",
-  "version": "1.0.1",
-  "description": "sldfjklksajdf sald;jflak;sdjfj",
+  "version": "1.0.2",
+  "description": "This CLI application will generate a nice readme.md file for the user based upon their inputs.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Stuart Wong",
-  "license": "ISC",
+  "license": "UNLICENSED",
   "dependencies": {
     "inquirer": "^6.5.2",
     "util": "^0.12.3"
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/swong1200/readMeCreator/issues"
   },
-  "homepage": "https://github.com/swong1200/readMeCreator#readme"
+  "homepage": "https://github.com/swong1200/readMeCreator#readme",
+  "keywords": [
+    "readme"
+  ]
 }
