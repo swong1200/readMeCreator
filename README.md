@@ -16,6 +16,8 @@ This CLI application will generate a nice readme.md file for the user based upon
 -[Questions](#questions)
 
 -[Author](#author)
+
+-[Demonstration Video](#demonstration-video)
 ## Installation
 npm install inquirer; npm install util
 ## Usage
@@ -46,11 +48,15 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <http://unlicense.org/>
 ## Contributing
-None
+No Guidelines
 ## Tests
 None
 ## Questions
 If you have any questions or issues, please forward them to me at swong31@gmail.com.
 ## Author
 [www.github.com/swong1200](https://github.com/swong1200)
-  
+## Demonstration Video
+[https://drive.google.com/file/d/1_o5IUADiBpOg1tW-qzvNL8VElRPpdvJa/view?usp=sharing](https://drive.google.com/file/d/1_o5IUADiBpOg1tW-qzvNL8VElRPpdvJa/view?usp=sharing)
+
+![](images\CLI%20Screenshot.png)
+![](images\Read%20Me%20Screenshot.png)
