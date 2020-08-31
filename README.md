@@ -58,5 +58,5 @@ If you have any questions or issues, please forward them to me at swong31@gmail.
 ## Demonstration Video
 [https://drive.google.com/file/d/1_o5IUADiBpOg1tW-qzvNL8VElRPpdvJa/view?usp=sharing](https://drive.google.com/file/d/1_o5IUADiBpOg1tW-qzvNL8VElRPpdvJa/view?usp=sharing)
 
-![](images\CLI%20Screenshot.png)
-![](images\Read%20Me%20Screenshot.png)
+![](images/CLI%20Screenshot.png)
+![](images/Read%20Me%20Screenshot.png)
