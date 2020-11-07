@@ -27,6 +27,7 @@ ${data.description}
 -[Tests](#tests)\n
 -[Questions](#questions)\n
 -[Author](#author)
+-[Screenshots](#screenshots)
 ## Installation
 ${data.installation}
 ## Usage
@@ -41,6 +42,8 @@ ${data.tests}
 If you have any questions or issues, please forward them to me at ${data.email}.
 ## Author
 [www.github.com/${data.github}](https://github.com/${data.github})
+## Screenshots
+![]()
   `;
 }
 
